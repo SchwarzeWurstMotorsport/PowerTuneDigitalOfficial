@@ -43,7 +43,7 @@ if [ -d /home/root ]; then
     else
         echo "Create source directory and clone PowerTune Repo"
         mkdir /home/pi/src
-        git clone https://github.com/PowerTuneDigital/PowerTuneDigitalOfficial.git /home/pi/src
+        git clone https://github.com/SchwarzeWurstMotorsport/PowerTuneDigitalOfficial.git /home/pi/src
         cd src
         ./updatedaemons.sh
         ./updateUserDashboards.sh
@@ -102,7 +102,7 @@ else
         else
             echo "Create source directory and clone PowerTune Repo"
             mkdir /home/pi/src
-            git clone https://github.com/PowerTuneDigital/PowerTuneDigitalOfficial.git /home/pi/src  
+            git clone https://github.com/SchwarzeWurstMotorsport/PowerTuneDigitalOfficial.git /home/pi/src  
             cd src
             ./fixcan.sh
             ./updatedaemons.sh
