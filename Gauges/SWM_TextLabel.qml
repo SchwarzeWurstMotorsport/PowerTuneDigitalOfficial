@@ -15,6 +15,13 @@ Item {
     property string datasourcename
     property bool fontbold
     property int decimalpoints
+    property float threshold_1
+    property float threshold_2
+    property float threshold_3
+    property string region_1_color
+    property string region_2_color
+    property string region_3_color
+    property string region_4_color
     Drag.active: false
 
     Component.onCompleted: {
@@ -45,18 +52,32 @@ Item {
         font.bold: fontbold
         color: textcolor
         anchors.centerIn: parent
-        onTextChanged: warningindication.warn();
+        onTextChanged: updateTextColor();
         }
+
+    function updateTextColor()
+    {
+        if mytext.text < threshold_1
+            mytext.color = region_1_color;
+        else if mytext.text >= threshold_1 && mytext.text < threshold_2
+            mytext.color = region_2_color;
+        else if mytext.text >= threshold_2 && mytext.text < threshold_3
+            mytext.color = region_3_color;
+        else if mytext.text >= threshold_3
+            mytext.color = region_4_color;
+        else
+        mytext.color = textcolor;
+    }
 
     function checkdatasource()
     {
         if (datasourcename != ""){
             if (decimalpoints < 4)
             {
-                changetext.text  = Qt.binding(function(){return Dashboard[datasourcename].toFixed(decimalpoints)});
+                mytext.text  = Qt.binding(function(){return Dashboard[datasourcename].toFixed(decimalpoints)});
             }
             else
-                changetext.text  = Qt.binding(function(){return Dashboard[datasourcename]});
+                mytext.text  = Qt.binding(function(){return Dashboard[datasourcename]});
         }
     }
 }
