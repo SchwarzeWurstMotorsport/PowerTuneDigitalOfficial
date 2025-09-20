@@ -12,6 +12,7 @@ import "qrc:/Gauges/createRoundGauge.js" as CreateRoundgaugeScript
 import "qrc:/Gauges/createsquaregaugeUserDash.js" as CreateSquareGaugeScript
 import "qrc:/Gauges/createverticalbargauge.js" as CreateBargaugeScript
 import "qrc:/Gauges/createText.js" as CreateTextScript
+import "qrc:/Gauges/createSWMText.js" as CreateSwmTextScript
 import "qrc:/Gauges/createPicture.js" as CreatePictureScript
 import "qrc:/Gauges/createStatePicture.js" as CreateStatePictureScript
 import "qrc:/Gauges/createStateGIF.js" as CreateStateGIFScript
@@ -147,7 +148,10 @@ Item {
                     // //console.log("Create image")
                     CreateStateGIFScript.createPicture(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8));
                 }
-
+                if (dashvalue.textAt(0) === "SWM Text label gauge")
+                {
+                   CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints);
+                }
             }
 
         }
@@ -1044,7 +1048,7 @@ Item {
                 break;
             }
             case "SWM Text label gauge": {
-                CreateTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints);
+                CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints);
                 break;
             }
             }
