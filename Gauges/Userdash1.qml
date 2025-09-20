@@ -1069,7 +1069,10 @@ Item {
                 );
                 break;
             }
-            }
+            default: {
+                console.log("No gauge found matching the type: " + gaugelist.get(i).info);
+                break;
+            }   
         }
     }
 
