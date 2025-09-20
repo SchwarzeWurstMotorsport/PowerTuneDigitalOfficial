@@ -150,7 +150,7 @@ Item {
                 }
                 if (dashvalue.textAt(0) === "SWM Text label gauge")
                 {
-                   CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11) || 0,dashvalue.textAt(12) || 0,dashvalue.textAt(13) || 0,dashvalue.textAt(14) || "transparent",dashvalue.textAt(15) || "transparent",dashvalue.textAt(16) || "transparent",dashvalue.textAt(17) || "transparent");
+                   CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13),dashvalue.textAt(14),dashvalue.textAt(15),dashvalue.textAt(16),dashvalue.textAt(17));
                 }
             }
 
@@ -1048,7 +1048,25 @@ Item {
                 break;
             }
             case "SWM Text label gauge": {
-                CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints,gaugelist.get(i).threshold_1 || 0,gaugelist.get(i).threshold_2 || 0,gaugelist.get(i).threshold_3 || 0,gaugelist.get(i).region_1_color || "transparent",gaugelist.get(i).region_2_color || "transparent",gaugelist.get(i).region_3_color || "transparent",gaugelist.get(i).region_4_color || "transparent");
+                CreateSwmTextScript.createText(
+                    gaugelist.get(i).x,
+                    gaugelist.get(i).y,
+                    gaugelist.get(i).displaytext,
+                    gaugelist.get(i).fonttype,
+                    gaugelist.get(i).fontsize,
+                    gaugelist.get(i).textcolor,
+                    gaugelist.get(i).backgroundcolor,
+                    gaugelist.get(i).datasourcename,
+                    gaugelist.get(i).fontbold,
+                    gaugelist.get(i).decimalpoints,
+                    gaugelist.get(i).threshold_1,
+                    gaugelist.get(i).threshold_2,
+                    gaugelist.get(i).threshold_3,
+                    gaugelist.get(i).region_1_color,
+                    gaugelist.get(i).region_2_color,
+                    gaugelist.get(i).region_3_color,
+                    gaugelist.get(i).region_4_color
+                );
                 break;
             }
             }
