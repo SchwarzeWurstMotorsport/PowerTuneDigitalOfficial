@@ -1070,7 +1070,7 @@ Item {
                 break;
             }
             default: {
-                console.log("No gauge found matching the type: " + gaugelist.get(i).info);
+                console.log("No gauge found matching the type: ", gaugelist.get(i).info);
                 break;
             }   
         }
@@ -1271,9 +1271,7 @@ Item {
                                      "trigger":userDash.children[i].triggervalue,
                                      "pictureoff":userDash.children[i].statepicturesourceoff,
                                      "pictureon":userDash.children[i].statepicturesourceon,
-                                     "triggeroff":userDash.children[i].triggeroffvalue,
-
-})
+                                     "triggeroff":userDash.children[i].triggeroffvalue})
             }
         }
         var datamodel = []
