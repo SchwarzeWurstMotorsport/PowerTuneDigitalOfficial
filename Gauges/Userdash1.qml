@@ -150,7 +150,7 @@ Item {
                 }
                 if (dashvalue.textAt(0) === "SWM Text label gauge")
                 {
-                   CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints);
+                   CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10));
                 }
             }
 
