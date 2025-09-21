@@ -57,13 +57,13 @@ Item {
 
     function updateTextColor()
     {
-        if mytext.text < threshold_1
+        if (mytext.text < threshold_1)
             mytext.color = region_1_color;
-        else if mytext.text >= threshold_1 && mytext.text < threshold_2
+        else if (mytext.text >= threshold_1 && mytext.text < threshold_2)
             mytext.color = region_2_color;
-        else if mytext.text >= threshold_2 && mytext.text < threshold_3
+        else if (mytext.text >= threshold_2 && mytext.text < threshold_3)
             mytext.color = region_3_color;
-        else if mytext.text >= threshold_3
+        else if (mytext.text >= threshold_3)
             mytext.color = region_4_color;
         else
         mytext.color = textcolor;
