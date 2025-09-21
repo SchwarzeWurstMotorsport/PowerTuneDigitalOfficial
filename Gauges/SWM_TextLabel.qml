@@ -12,12 +12,12 @@ Item {
     property int fontsize
     property string textcolor
     property string backgroundcolor
-    property string datasourcename
+    property string datasourcename: "Analog1"
     property bool fontbold
     property int decimalpoints
-    property float threshold_1: 10
-    property float threshold_2: 20
-    property float threshold_3: 30
+    property double threshold_1: 10.0
+    property double threshold_2: 20.0
+    property double threshold_3: 30.0
     property string region_1_color: "blue"
     property string region_2_color: "green"
     property string region_3_color: "yellow"
