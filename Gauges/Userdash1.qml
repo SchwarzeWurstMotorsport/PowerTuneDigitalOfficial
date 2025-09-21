@@ -150,6 +150,7 @@ Item {
                 }
                 if (dashvalue.textAt(0) === "SWM Text label gauge")
                 {
+                   console.log("Create SWM Text label gauge")
                    CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10));
                 }
             }
@@ -938,6 +939,7 @@ Item {
             }
             if (userDash.children[i].information === "SWM Text label gauge")
             {
+                console.log("Save SWM Text label gauge to string");
                 saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].displaytext+","+userDash.children[i].fonttype+","+userDash.children[i].fontsize+","+userDash.children[i].textcolor+","+userDash.children[i].backgroundcolor+","+userDash.children[i].datasourcename+","+userDash.children[i].fontbold+","+userDash.children[i].decimalpoints+"\r\n");
             }
         }
@@ -1048,6 +1050,7 @@ Item {
                 break;
             }
             case "SWM Text label gauge": {
+                console.log("Save SWM Text label gauge");
                 CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints);
                 break;
             }
