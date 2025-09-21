@@ -4,9 +4,10 @@ var gauge;
 
 
 function createText(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints) {
+    console.log("Qt.createComponent SWM text label ");
     component = Qt.createComponent("SWM_TextLabel.qml");
     if (component.status === Component.Ready){
-       // console.log("text component ready");
+        console.log("SWM text label component ready");
         finishCreation(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints);
     }
      else
@@ -15,6 +16,7 @@ function createText(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolo
 
 function finishCreation(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints) {
     if (component.status === Component.Ready) {
+        console.log("finishCreation SWM text label ");
         gauge = component.createObject(userDash, {
                                         "x" :setX,
                                         "y" :setY,
