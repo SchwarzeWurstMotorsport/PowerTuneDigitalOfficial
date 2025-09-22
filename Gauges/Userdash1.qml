@@ -1050,8 +1050,8 @@ Item {
                 break;
             }
             case "SWM Text label gauge": {
-                console.log("Save SWM Text label gauge");
-                CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints);
+                console.log("Create SWM Text label gauge");
+                CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
                 break;
             }
             }
