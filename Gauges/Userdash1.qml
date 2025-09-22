@@ -13,6 +13,7 @@ import "qrc:/Gauges/createsquaregaugeUserDash.js" as CreateSquareGaugeScript
 import "qrc:/Gauges/createverticalbargauge.js" as CreateBargaugeScript
 import "qrc:/Gauges/createText.js" as CreateTextScript
 import "qrc:/Gauges/createSWMText.js" as CreateSwmTextScript
+import "qrc:/Gauges/createSWMStateIcon.js" as CreateSwmStateIconScript
 import "qrc:/Gauges/createPicture.js" as CreatePictureScript
 import "qrc:/Gauges/createStatePicture.js" as CreateStatePictureScript
 import "qrc:/Gauges/createStateGIF.js" as CreateStateGIFScript
@@ -152,6 +153,11 @@ Item {
                 {
                    console.log("Create SWM Text label gauge")
                    CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13),dashvalue.textAt(14),dashvalue.textAt(15),dashvalue.textAt(16),dashvalue.textAt(17));
+                }
+                if (dashvalue.textAt(0) === "SWM State Icon gauge")
+                {
+                   console.log("SWM State Icon gauge")
+                   CreateSwmStateIconScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13));
                 }
             }
 
