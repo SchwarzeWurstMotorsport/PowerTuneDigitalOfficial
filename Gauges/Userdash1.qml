@@ -1260,19 +1260,9 @@ Item {
                                      "source":userDash.children[i].mainvaluename,
                                      "trigger":userDash.children[i].triggervalue,
                                      "pictureoff":userDash.children[i].statepicturesourceoff,
-                                     "pictureon":userDash.children[i].statepicturesourceon})
-            }
-            if(userDash.children[i].information === "State GIF"){
-                //console.log("Save Image" ,userDash.children[i].mainvaluename);
-                gaugelist.append({   "info":userDash.children[i].information,
-                                     "x":userDash.children[i].x,
-                                     "y":userDash.children[i].y,
-                                     "height":userDash.children[i].pictureheight,
-                                     "source":userDash.children[i].mainvaluename,
-                                     "trigger":userDash.children[i].triggervalue,
-                                     "pictureoff":userDash.children[i].statepicturesourceoff,
                                      "pictureon":userDash.children[i].statepicturesourceon,
-                                     "triggeroff":userDash.children[i].triggeroffvalue})
+                                     "triggeroff": userDash.children[i].triggeroffvalue
+                                 })
             }
         }
         var datamodel = []
@@ -1284,7 +1274,7 @@ Item {
         id: selectcolor
         x:0
         y:0
-        height : mainwindow.height * 0.41 //200
+        height: mainwindow.height * 0.41 //200
         width: mainwindow.width * 0.625 //500
         color: "darkgrey"
         visible: false
