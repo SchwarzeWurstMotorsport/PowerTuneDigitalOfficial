@@ -56,31 +56,26 @@ Item {
             updateIconColor();
         }
     }
-    
+
     function updateIconColor()
     {
         console.log("SWM_TextLabel: updateIconColor");
         if (mainvaluetextfield.text < threshold_1)
-            mainvaluetextfield.color = region_1_color;
+            backgroundrect.color = region_1_color;
         else if (mainvaluetextfield.text >= threshold_1 && mainvaluetextfield.text < threshold_2)
-            mainvaluetextfield.color = region_2_color;
+            backgroundrect.color = region_2_color;
         else if (mainvaluetextfield.text >= threshold_2 && mainvaluetextfield.text < threshold_3)
-            mainvaluetextfield.color = region_3_color;
+            backgroundrect.color = region_3_color;
         else if (mainvaluetextfield.text >= threshold_3)
-            mainvaluetextfield.color = region_4_color;
+            backgroundrect.color = region_4_color;
         else
-            mainvaluetextfield.color = "magenta";
+            backgroundrect.color = "magenta";
     }
 
     function checkdatasource()
     {
         console.log("SWM_TextLabel: checkdatasource");
         if (datasourcename != ""){
-            if (decimalpoints < 4)
-            {
-                mainvaluetextfield.text  = Qt.binding(function(){return Dashboard[datasourcename].toFixed(decimalpoints)});
-            }
-            else
                 mainvaluetextfield.text  = Qt.binding(function(){return Dashboard[datasourcename]});
         }
     }
