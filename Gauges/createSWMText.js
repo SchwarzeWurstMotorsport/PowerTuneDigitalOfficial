@@ -3,23 +3,25 @@ var component;
 var gauge;
 
 
-function createText(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints, setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
+function createText(setX,setY,setWidth,setHeight,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints, setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
     console.log("Qt.createComponent SWM text label ");
     component = Qt.createComponent("SWM_TextLabel.qml");
     if (component.status === Component.Ready){
         console.log("SWM text label component ready");
-        finishCreation(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints, setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color);
+        finishCreation(setX,setY,setWidth,setHeight,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints, setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color);
     }
      else
         component.statusChanged.connect(finishCreation);
 }
 
-function finishCreation(setX,setY,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints, setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
+function finishCreation(setX,setY,setWidth,setHeight,setdisplaytext,setfonttype,setfontsize,settextcolor,setbackgroundcolor,setdatasourcename,setfontbold,setdecimalpoints, setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
     if (component.status === Component.Ready) {
         console.log("finishCreation SWM text label ");
         gauge = component.createObject(userDash, {
                                         "x" :setX,
                                         "y" :setY,
+                                        "width":setWidth,
+                                        "height":setHeight,
                                         "displaytext" :setdisplaytext,
                                         "fonttype" :setfonttype,
                                         "fontsize" : setfontsize,

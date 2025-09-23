@@ -4,8 +4,6 @@ import "qrc:/Translator.js" as Translator
 
 Item {
     id:swmtextlabel
-    height: mytext.height
-    width:  mytext.width
     property string information: "SWM Text label gauge"
     property string displaytext
     property string fonttype
