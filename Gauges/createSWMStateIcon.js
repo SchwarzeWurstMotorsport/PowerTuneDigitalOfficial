@@ -4,10 +4,10 @@ var gauge;
 
 
 function createText(setX,setY,setwidth,setheight,seticonimage,setdatasourcename,setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
-    console.log("Qt.createComponent SWM state icon ");
+    //console.log("Qt.createComponent SWM state icon ");
     component = Qt.createComponent("SWM_StateIcon.qml");
     if (component.status === Component.Ready){
-        console.log("SWM state icon component ready");
+        //console.log("SWM state icon component ready");
         finishCreation(setX,setY,setwidth,setheight,seticonimage,setdatasourcename,setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color);
     }
      else
@@ -16,7 +16,7 @@ function createText(setX,setY,setwidth,setheight,seticonimage,setdatasourcename,
 
 function finishCreation(setX,setY,setwidth,setheight,seticonimage,setdatasourcename,setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
     if (component.status === Component.Ready) {
-        console.log("finishCreation SWM state icon ");
+        //console.log("finishCreation SWM state icon ");
         gauge = component.createObject(userDash, {
                                         "x":setX,
                                         "y":setY,

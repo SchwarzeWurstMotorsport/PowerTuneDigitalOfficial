@@ -12,7 +12,7 @@ Rectangle {
     height: parent.height * (200 / parent.height)
     property string information: "Square gauge"
     border.color: "#9f9f9f"
-    border.width: 0
+    border.width: 2
     Component.onCompleted: {set();        
     }
 
@@ -184,29 +184,6 @@ Rectangle {
         }
     }
 
-    function set()
-    {
-        gauge.color = resetbackroundcolor;
-        gauge.border.color = framecolor;
-        gauge.titlecolor = resettitlecolor;
-        gaugetextfield.color =  titletextcolor;
-        secondaryvaluetextfield.color =  textcolor;
-        mainvaluetextfield.color =  textcolor;
-        mainvalueunittextfield.color =  textcolor;
-        //vertgauge.valueBar.color = "green"
-    }
-    function togglemousearea()
-    {
-        if (Dashboard.draggable === 1)
-        {
-            touchArea.enabled = true;
-            //    console.log ("Enable square touch");
-        }
-        else
-            touchArea.enabled = false;
-        //    console.log ("Disable square touch");
-    }
-    //
     function toggledecimal()
     {
         //console.log("Decimalpints loaded " + decimalpoints);
@@ -220,20 +197,5 @@ Rectangle {
         vertgauge.value = 0;
         horizgauge.value = 0;
         }
-    }
-    function toggledecimal2()
-    {
-        //console.log("toggle sec decimal "+decimalpoints2)
-        if (decimalpoints2 < 4)
-        {
-            secondaryvaluetextfield.text =  Qt.binding(function(){return Dashboard[secvaluename].toFixed(decimalpoints2)});
-        }
-        else
-        {
-            secondaryvaluetextfield.text = Qt.binding(function(){return Dashboard[secvaluename]});
-        vertgauge.value = 0;
-        horizgauge.value = 0;
-        }
-
     }
 }
