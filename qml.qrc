@@ -80,6 +80,7 @@
         <file>Gauges/MyTextLabel.qml</file>
         <file>Gauges/SWM_TextLabel.qml</file>
         <file>Gauges/SWM_StateIcon.qml</file>
+        <file>Gauges/SWM_SquareGauge.qml</file>
         <file>Gauges/createText.js</file>
         <file>Gauges/createSWMText.js</file>
         <file>Gauges/createSWMStateIcon.js</file>
