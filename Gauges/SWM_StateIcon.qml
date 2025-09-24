@@ -59,7 +59,7 @@ Item {
 
     function updateIconColor()
     {
-        console.log("SWM_TextLabel: updateIconColor");
+        //console.log("SWM_TextLabel: updateIconColor");
         if (mainvaluetextfield.text < threshold_1)
             backgroundrect.color = region_1_color;
         else if (mainvaluetextfield.text >= threshold_1 && mainvaluetextfield.text < threshold_2)
@@ -74,7 +74,7 @@ Item {
 
     function checkdatasource()
     {
-        console.log("SWM_TextLabel: checkdatasource");
+        //console.log("SWM_TextLabel: checkdatasource");
         if (datasourcename != ""){
                 mainvaluetextfield.text  = Qt.binding(function(){return Dashboard[datasourcename]});
         }

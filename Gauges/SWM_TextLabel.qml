@@ -58,7 +58,7 @@ Item {
 
     function updateTextColor()
     {
-        console.log("SWM_TextLabel: updateTextColor");
+        //console.log("SWM_TextLabel: updateTextColor");
         if (mytext.text < threshold_1)
             mytext.color = region_1_color;
         else if (mytext.text >= threshold_1 && mytext.text < threshold_2)
@@ -73,7 +73,7 @@ Item {
 
     function checkdatasource()
     {
-        console.log("SWM_TextLabel: checkdatasource");
+        //console.log("SWM_TextLabel: checkdatasource");
         if (datasourcename != ""){
             if (decimalpoints < 4)
             {
