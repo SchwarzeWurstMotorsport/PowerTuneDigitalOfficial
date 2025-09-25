@@ -16,10 +16,10 @@ Item {
     property double threshold_1: 10.0
     property double threshold_2: 20.0
     property double threshold_3: 30.0
-    property string region_1_color: "blue"
-    property string region_2_color: "green"
-    property string region_3_color: "yellow"
-    property string region_4_color: "red"
+    property string region_1_color: "magenta"
+    property string region_2_color: "purple"
+    property string region_3_color: "darkviolet"
+    property string region_4_color: "indigo"
     Drag.active: false
 
     Component.onCompleted: {
