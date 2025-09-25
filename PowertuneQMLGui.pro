@@ -3,6 +3,7 @@ TEMPLATE = app
 QT += qml quick serialport serialbus network charts location positioning sensors multimedia widgets
 
 CONFIG += c++11
+CONFIG += QML_DEBUG
 
 # QMAKE_LFLAGS += -static
 # Check for the existence of ddcutil headers
