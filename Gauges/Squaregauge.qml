@@ -314,6 +314,7 @@ Rectangle {
                 implicitWidth: vertgauge.width
                 color: barcolor
             }
+            foreground: null
             background: Rectangle {
                 width: parent.width
                 height: parent.height
@@ -358,6 +359,7 @@ Rectangle {
                 implicitWidth: horizgauge.height
                 color: barcolor
             }
+            foreground: null
             background: Rectangle {
                 width: parent.width
                 height: parent.height
