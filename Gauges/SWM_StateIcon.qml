@@ -60,13 +60,14 @@ Item {
     function updateIconColor()
     {
         //console.log("SWM_TextLabel: updateIconColor");
-        if (number(mainvaluetextfield.text) < threshold_1)
+        var currentvalue = Number(mainvaluetextfield.text);
+        if (currentvalue < threshold_1)
             backgroundrect.color = region_1_color;
-        else if (number(mainvaluetextfield.text) >= threshold_1 && number(mainvaluetextfield.text) < threshold_2)
+        else if (currentvalue >= threshold_1 && currentvalue < threshold_2)
             backgroundrect.color = region_2_color;
-        else if (number(mainvaluetextfield.text) >= threshold_2 && number(mainvaluetextfield.text) < threshold_3)
+        else if (currentvalue >= threshold_2 && currentvalue < threshold_3)
             backgroundrect.color = region_3_color;
-        else if (number(mainvaluetextfield.text) >= threshold_3)
+        else if (currentvalue >= threshold_3)
             backgroundrect.color = region_4_color;
         else
             backgroundrect.color = "magenta";
