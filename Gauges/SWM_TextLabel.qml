@@ -59,13 +59,13 @@ Item {
     function updateTextColor()
     {
         //console.log("SWM_TextLabel: updateTextColor");
-        if (mytext.text < threshold_1)
+        if (number(mytext.text) < threshold_1)
             mytext.color = region_1_color;
-        else if (mytext.text >= threshold_1 && mytext.text < threshold_2)
+        else if (number(mytext.text) >= threshold_1 && number(mytext.text) < threshold_2)
             mytext.color = region_2_color;
-        else if (mytext.text >= threshold_2 && mytext.text < threshold_3)
+        else if (number(mytext.text) >= threshold_2 && number(mytext.text) < threshold_3)
             mytext.color = region_3_color;
-        else if (mytext.text >= threshold_3)
+        else if (number(mytext.text) >= threshold_3)
             mytext.color = region_4_color;
         else
         mytext.color = textcolor;
