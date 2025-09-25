@@ -13,7 +13,8 @@ Rectangle {
     property string information: "Square gauge"
     border.color: "#9f9f9f"
     border.width: 2
-    Component.onCompleted: {set();        
+    Component.onCompleted: {
+        set();        
     }
 
     property string mainvaluename
@@ -184,6 +185,17 @@ Rectangle {
         }
     }
 
+    function set()
+    {
+        gauge.color = resetbackroundcolor;
+        gauge.border.color = framecolor;
+        gauge.titlecolor = resettitlecolor;
+        gaugetextfield.color =  titletextcolor;
+        secondaryvaluetextfield.color =  textcolor;
+        mainvaluetextfield.color =  textcolor;
+        mainvalueunittextfield.color =  textcolor;
+        //vertgauge.valueBar.color = "green"
+    }
     function toggledecimal()
     {
         //console.log("Decimalpints loaded " + decimalpoints);
