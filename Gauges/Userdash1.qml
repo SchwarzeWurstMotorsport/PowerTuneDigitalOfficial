@@ -1153,23 +1153,20 @@ Item {
                 //Apend all values of each gauge to the List Model
                 gaugelist.append({"type": userDash.children[i].title,"width":userDash.children[i].width,"height":userDash.children[i].height,"x":userDash.children[i].x,"y":userDash.children[i].y,"maxvalue":userDash.children[i].maxvalue,"decplace":userDash.children[i].decimalpoints,"unit":userDash.children[i].mainunit,"id":userDash.children[i].title,"vertgaugevis":userDash.children[i].vertgaugevisible,"horigaugevis":userDash.children[i].horigaugevisible,"secvaluevis":userDash.children[i].secvaluevisible,"valuepropertymain":userDash.children[i].mainvaluename,"valuepropertysec":userDash.children[i].secvaluename,"warnvaluehigh":userDash.children[i].warnvaluehigh,"warnvaluelow":userDash.children[i].warnvaluelow,"framecolor":userDash.children[i].framecolor,"backroundcolor":userDash.children[i].resetbackroundcolor,"titlecolor":userDash.children[i].resettitlecolor,"titletextcolor":userDash.children[i].titletextcolor,"textcolor":userDash.children[i].textcolor,"barcolor":userDash.children[i].barcolor,"titlefontsize":userDash.children[i].titlefontsize,"mainfontsize":userDash.children[i].mainfontsize,"info":userDash.children[i].information,"decplace2":userDash.children[i].decimalpoints2,"textfont":userDash.children[i].textFonttype,"valuefont":userDash.children[i].valueFonttype})
             }
+
             if(userDash.children[i].information === "Bar gauge"){
-
-
+                //console.log("Save Bar");
                 gaugelist.append({"type": userDash.children[i].title,"width":userDash.children[i].width,"height":userDash.children[i].height,"x":userDash.children[i].x,"y":userDash.children[i].y,"maxvalue":userDash.children[i].maxvalue,"decplace":userDash.children[i].decimalpoints,"unit":userDash.children[i].gaugename,"id":userDash.children[i].title,"valuepropertymain":userDash.children[i].mainvaluename,"warnvaluehigh":userDash.children[i].warnvaluehigh,"warnvaluelow":userDash.children[i].warnvaluelow,"info":userDash.children[i].information,"minvalue":userDash.children[i].minvalue})
-
-                ;
-
             }
+
             if(userDash.children[i].information === "gauge image"){
                 //console.log("Save Image");
                 gaugelist.append({"info":userDash.children[i].information,"x":userDash.children[i].x,"y":userDash.children[i].y,"pictureheight":userDash.children[i].pictureheight,"picturesource":userDash.children[i].picturesource})
             }
+
             if(userDash.children[i].information === "Text label gauge"){
                 //console.log("Text label gauge");
-
                 gaugelist.append({"info":userDash.children[i].information,"width":userDash.children[i].width,"height":userDash.children[i].height,"x":userDash.children[i].x,"y":userDash.children[i].y,"displaytext":userDash.children[i].displaytext,"fonttype":userDash.children[i].fonttype,"fontsize":userDash.children[i].fontsize,"textcolor":userDash.children[i].textcolor,"datasourcename":userDash.children[i].datasourcename,"fontbold":userDash.children[i].fontbold,"decimalpoints":userDash.children[i].decimalpoints,"warnvaluehigh":userDash.children[i].warnvaluehigh,"warnvaluelow":userDash.children[i].warnvaluelow})
-
             }
 
             if(userDash.children[i].information === "Round gauge"){
@@ -1257,6 +1254,7 @@ Item {
                                      "pictureoff":userDash.children[i].statepicturesourceoff,
                                      "pictureon":userDash.children[i].statepicturesourceon})
             }
+            
             if(userDash.children[i].information === "State GIF"){
                 //console.log("Save Image" ,userDash.children[i].mainvaluename);
                 gaugelist.append({   "info":userDash.children[i].information,
@@ -1267,10 +1265,9 @@ Item {
                                      "trigger":userDash.children[i].triggervalue,
                                      "pictureoff":userDash.children[i].statepicturesourceoff,
                                      "pictureon":userDash.children[i].statepicturesourceon,
-                                     "triggeroff":userDash.children[i].triggeroffvalue,
-
-})
+                                     "triggeroff":userDash.children[i].triggeroffvalue})
             }
+
             if(userDash.children[i].information === "SWM Text label gauge"){
                 //console.log("Save SWM Text label gauge");
                 gaugelist.append({   "info":userDash.children[i].information,
@@ -1292,9 +1289,9 @@ Item {
                                      "region_1_color":userDash.children[i].region_1_color,
                                      "region_2_color":userDash.children[i].region_2_color,
                                      "region_3_color":userDash.children[i].region_3_color,
-                                     "region_4_color":userDash.children[i].region_4_color
-                                 })
+                                     "region_4_color":userDash.children[i].region_4_color})
             }
+
             if(userDash.children[i].information === "SWM State Icon gauge"){
                 //console.log("Save SWM State Icon gauge");
                 gaugelist.append({   "info":userDash.children[i].information,
@@ -1310,8 +1307,7 @@ Item {
                                      "region_1_color":userDash.children[i].region_1_color,
                                      "region_2_color":userDash.children[i].region_2_color,
                                      "region_3_color":userDash.children[i].region_3_color,
-                                     "region_4_color":userDash.children[i].region_4_color
-                                 })
+                                     "region_4_color":userDash.children[i].region_4_color})
             }
         }
         var datamodel = []
