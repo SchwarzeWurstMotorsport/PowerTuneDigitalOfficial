@@ -3,7 +3,7 @@ var component;
 var gauge;
 
 
-function createText(setX,setY,setwidth,setheight,seticonimage,setdatasourcename,setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
+function createIcon(setX,setY,setwidth,setheight,seticonimage,setdatasourcename,setthreshold_1, setthreshold_2, setthreshold_3, setregion_1_color, setregion_2_color, setregion_3_color, setregion_4_color) {
     //console.log("Qt.createComponent SWM state icon ");
     component = Qt.createComponent("SWM_StateIcon.qml");
     if (component.status === Component.Ready){
