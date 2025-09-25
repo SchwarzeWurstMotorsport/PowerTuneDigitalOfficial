@@ -314,6 +314,11 @@ Rectangle {
                 implicitWidth: vertgauge.width
                 color: barcolor
             }
+            background: Rectangle {
+                width: parent.width
+                height: parent.height
+                color: "black"
+            }
         }
     }
 
@@ -352,6 +357,11 @@ Rectangle {
             valueBar: Rectangle {
                 implicitWidth: horizgauge.height
                 color: barcolor
+            }
+            background: Rectangle {
+                width: parent.width
+                height: parent.height
+                color: "black"
             }
         }
     }
