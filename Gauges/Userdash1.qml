@@ -948,10 +948,10 @@ Item {
                 //console.log("Save SWM Text label gauge to string");
                 saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].displaytext+","+userDash.children[i].fonttype+","+userDash.children[i].fontsize+","+userDash.children[i].textcolor+","+userDash.children[i].backgroundcolor+","+userDash.children[i].datasourcename+","+userDash.children[i].fontbold+","+userDash.children[i].decimalpoints+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+",\r\n");
             }
-            if (userDash.children[i].information === "SWM State Icon gauge")
-            {
-                saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].iconimage+","+userDash.children[i].datasourcename+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+","+"\r\n");
-            }
+            // if (userDash.children[i].information === "SWM State Icon gauge")
+            // {
+            //     saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].iconimage+","+userDash.children[i].datasourcename+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+","+"\r\n");
+            // }
         }
     }
     function createDash()
