@@ -6,6 +6,6 @@ appsettings.cpp.autosave
 *.autosave
 
 .idea/
-
+build/
 .vs/
 Gauges/DatasourcesList_sourcenames.txt

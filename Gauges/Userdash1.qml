@@ -109,7 +109,7 @@ Item {
         {
             if (dashvalue.textAt(1) !== "") {
 
-              //  console.log("new item " +dashvalue.textAt(0) );
+                //  console.log("new item " +dashvalue.textAt(0) );
 
 
                 if (dashvalue.textAt(0) === "Bar gauge")
@@ -151,13 +151,13 @@ Item {
                 }
                 if (dashvalue.textAt(0) === "SWM Text label gauge")
                 {
-                   //console.log("Create SWM Text label gauge")
-                   CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13),dashvalue.textAt(14),dashvalue.textAt(15),dashvalue.textAt(16),dashvalue.textAt(17));
+                    //console.log("Create SWM Text label gauge")
+                    CreateSwmTextScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13),dashvalue.textAt(14),dashvalue.textAt(15),dashvalue.textAt(16),dashvalue.textAt(17));
                 }
                 if (dashvalue.textAt(0) === "SWM State Icon gauge")
                 {
-                   //console.log("SWM State Icon gauge")
-                   CreateSwmStateIconScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13),dashvalue.textAt(14),dashvalue.textAt(15));
+                    //console.log("SWM State Icon gauge")
+                    CreateSwmStateIconScript.createText(dashvalue.textAt(1),dashvalue.textAt(2),dashvalue.textAt(3),dashvalue.textAt(4),dashvalue.textAt(5),dashvalue.textAt(6),dashvalue.textAt(7),dashvalue.textAt(8),dashvalue.textAt(9),dashvalue.textAt(10),dashvalue.textAt(11),dashvalue.textAt(12),dashvalue.textAt(13),dashvalue.textAt(14),dashvalue.textAt(15));
                 }
             }
 
@@ -210,12 +210,12 @@ Item {
 
     function updatppiclist()
     {
-                    for(var i = 0; i < backroundSelector.count; ++i)
-//                    if (backroundpicture1.source == "file:///home/pi/Logo/" + backroundSelector.textAt(i))
-                        if (backroundpicture1.source == "file:"  + backroundSelector.textAt(i))
+        for(var i = 0; i < backroundSelector.count; ++i)
+            //                    if (backroundpicture1.source == "file:///home/pi/Logo/" + backroundSelector.textAt(i))
+            if (backroundpicture1.source == "file:"  + backroundSelector.textAt(i))
 
 
-                    backroundSelector.currentIndex = i
+                backroundSelector.currentIndex = i
     }
 
 
@@ -397,10 +397,10 @@ Item {
                 }
                 Component.onCompleted: {
                     for(var i = 1; i < mainbackroundcolorselect.model.count; ++i)
-                   if (Qt.colorEqual(mainbackroundcolor.color,mainbackroundcolorselect.textAt(i)))
-                    mainbackroundcolorselect.currentIndex = i
+                        if (Qt.colorEqual(mainbackroundcolor.color,mainbackroundcolorselect.textAt(i)))
+                            mainbackroundcolorselect.currentIndex = i
                 }
-                 onCurrentIndexChanged:  mainbackroundcolor.color = mainbackroundcolorselect.textAt(mainbackroundcolorselect.currentIndex)
+                onCurrentIndexChanged:  mainbackroundcolor.color = mainbackroundcolorselect.textAt(mainbackroundcolorselect.currentIndex)
 
             }
             Text {
@@ -450,7 +450,7 @@ Item {
             anchors.fill:parent
             drag.target: squaregaugemenu
         }
-///////////////////
+        ///////////////////
         /*
         //Combobox filtered by ECU. Datasources must still be filled with each supported ECU
         ComboBox {
@@ -636,7 +636,7 @@ Item {
                 text: Translator.translate("State", Dashboard.language) + " " + Translator.translate("Image", Dashboard.language)
                 font.pixelSize: mainwindow.width * 0.015
                 onClicked: {
-                   // console.log("create State gauge ");
+                    // console.log("create State gauge ");
                     CreateStatePictureScript.createPicture(10,10,100,"speed",1,"qrc:/graphics/selectStateImage.png","qrc:/graphics/selectStateImage.png");
                     squaregaugemenu.visible = false;
                     selectcolor.visible =false;
@@ -650,7 +650,7 @@ Item {
                 text: Translator.translate("State", Dashboard.language) + " " + Translator.translate("GIF", Dashboard.language)
                 font.pixelSize: mainwindow.width * 0.015
                 onClicked: {
-                   // console.log("create State gauge ");
+                    // console.log("create State gauge ");
                     CreateStateGIFScript.createPicture(10,10,100,"speed",1,"qrc:/graphics/StateGIF.gif","qrc:/graphics/StateGIF.gif,0");
                     squaregaugemenu.visible = false;
                     selectcolor.visible =false;
@@ -943,7 +943,7 @@ Item {
             {
                 saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].pictureheight+","+userDash.children[i].mainvaluename+","+userDash.children[i].triggervalue+","+userDash.children[i].statepicturesourceoff+","+userDash.children[i].statepicturesourceon+","+userDash.children[i].triggeroffvalue+"\r\n");
             }
-            if (userDash.children[i].information === "SWM Text label gauge")
+            //if (userDash.children[i].information === "SWM Text label gauge")
             // {
             //     //console.log("Save SWM Text label gauge to string");
             //     saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].displaytext+","+userDash.children[i].fonttype+","+userDash.children[i].fontsize+","+userDash.children[i].textcolor+","+userDash.children[i].backgroundcolor+","+userDash.children[i].datasourcename+","+userDash.children[i].fontbold+","+userDash.children[i].decimalpoints+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+",\r\n");
@@ -1069,6 +1069,7 @@ Item {
             //     CreateSwmStateIconScript.createIcon(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).width,gaugelist.get(i).height,gaugelist.get(i).iconimage,gaugelist.get(i).datasourcename,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
             //     break;
             // }
+            }
         }
     }
 
@@ -1254,7 +1255,7 @@ Item {
                                      "pictureoff":userDash.children[i].statepicturesourceoff,
                                      "pictureon":userDash.children[i].statepicturesourceon})
             }
-            
+
             if(userDash.children[i].information === "State GIF"){
                 //console.log("Save Image" ,userDash.children[i].mainvaluename);
                 gaugelist.append({   "info":userDash.children[i].information,
@@ -1311,7 +1312,10 @@ Item {
             // }
         }
         var datamodel = []
-        for (var j = 0; j < gaugelist.count; ++j) datamodel.push(gaugelist.get(j))
+        for (var j = 0; j < gaugelist.count; ++j)
+        {
+            datamodel.push(gaugelist.get(j))
+        }
         datastore = JSON.stringify(datamodel)
     }
     //Color Selection panel
