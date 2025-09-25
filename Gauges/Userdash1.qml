@@ -944,10 +944,10 @@ Item {
                 saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].pictureheight+","+userDash.children[i].mainvaluename+","+userDash.children[i].triggervalue+","+userDash.children[i].statepicturesourceoff+","+userDash.children[i].statepicturesourceon+","+userDash.children[i].triggeroffvalue+"\r\n");
             }
             if (userDash.children[i].information === "SWM Text label gauge")
-            {
-                //console.log("Save SWM Text label gauge to string");
-                saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].displaytext+","+userDash.children[i].fonttype+","+userDash.children[i].fontsize+","+userDash.children[i].textcolor+","+userDash.children[i].backgroundcolor+","+userDash.children[i].datasourcename+","+userDash.children[i].fontbold+","+userDash.children[i].decimalpoints+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+",\r\n");
-            }
+            // {
+            //     //console.log("Save SWM Text label gauge to string");
+            //     saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].displaytext+","+userDash.children[i].fonttype+","+userDash.children[i].fontsize+","+userDash.children[i].textcolor+","+userDash.children[i].backgroundcolor+","+userDash.children[i].datasourcename+","+userDash.children[i].fontbold+","+userDash.children[i].decimalpoints+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+",\r\n");
+            // }
             // if (userDash.children[i].information === "SWM State Icon gauge")
             // {
             //     saveDashtofilestring += (userDash.children[i].information+","+userDash.children[i].x+","+userDash.children[i].y+","+userDash.children[i].width+","+userDash.children[i].height+","+userDash.children[i].iconimage+","+userDash.children[i].datasourcename+","+userDash.children[i].threshold_1+","+userDash.children[i].threshold_2+","+userDash.children[i].threshold_3+","+userDash.children[i].region_1_color+","+userDash.children[i].region_2_color+","+userDash.children[i].region_3_color+","+userDash.children[i].region_4_color+","+"\r\n");
@@ -1059,11 +1059,11 @@ Item {
                 CreateStateGIFScript.createPicture(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).height,gaugelist.get(i).source,gaugelist.get(i).trigger,gaugelist.get(i).pictureoff,gaugelist.get(i).pictureon,gaugelist.get(i).triggeroff);
                 break;
             }
-            case "SWM Text label gauge": {
-                //console.log("Create SWM Text label gauge");
-                CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).width,gaugelist.get(i).height,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
-                break;
-            }
+            // case "SWM Text label gauge": {
+            //     //console.log("Create SWM Text label gauge");
+            //     CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).width,gaugelist.get(i).height,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
+            //     break;
+            // }
             // case "SWM State Icon gauge": {
             //     //console.log("Create SWM State Icon gauge");
             //     CreateSwmStateIconScript.createIcon(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).width,gaugelist.get(i).height,gaugelist.get(i).iconimage,gaugelist.get(i).datasourcename,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
