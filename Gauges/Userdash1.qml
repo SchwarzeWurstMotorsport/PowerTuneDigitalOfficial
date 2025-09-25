@@ -1060,12 +1060,12 @@ Item {
                 break;
             }
             case "SWM Text label gauge": {
-                //console.log("Create SWM Text label gauge");
+                console.log("Create SWM Text label gauge");
                 CreateSwmTextScript.createText(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).width,gaugelist.get(i).height,gaugelist.get(i).displaytext,gaugelist.get(i).fonttype,gaugelist.get(i).fontsize,gaugelist.get(i).textcolor,gaugelist.get(i).backgroundcolor,gaugelist.get(i).datasourcename,gaugelist.get(i).fontbold,gaugelist.get(i).decimalpoints,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
                 break;
             }
             case "SWM State Icon gauge": {
-                //console.log("Create SWM State Icon gauge");
+                console.log("Create SWM State Icon gauge");
                 CreateSwmStateIconScript.createIcon(gaugelist.get(i).x,gaugelist.get(i).y,gaugelist.get(i).width,gaugelist.get(i).height,gaugelist.get(i).iconimage,gaugelist.get(i).datasourcename,gaugelist.get(i).threshold_1,gaugelist.get(i).threshold_2,gaugelist.get(i).threshold_3,gaugelist.get(i).region_1_color,gaugelist.get(i).region_2_color,gaugelist.get(i).region_3_color,gaugelist.get(i).region_4_color);
                 break;
             }
@@ -1270,7 +1270,7 @@ Item {
             }
 
             if(userDash.children[i].information === "SWM Text label gauge"){
-                //console.log("Save SWM Text label gauge");
+                console.log("Save SWM Text label gauge");
                 gaugelist.append({   "info":userDash.children[i].information,
                                      "x":userDash.children[i].x,
                                      "y":userDash.children[i].y,
@@ -1294,7 +1294,7 @@ Item {
             }
 
             if(userDash.children[i].information === "SWM State Icon gauge"){
-                //console.log("Save SWM State Icon gauge");
+                console.log("Save SWM State Icon gauge");
                 gaugelist.append({   "info":userDash.children[i].information,
                                      "x":userDash.children[i].x,
                                      "y":userDash.children[i].y,
